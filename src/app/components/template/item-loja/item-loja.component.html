@@ -1,0 +1,32 @@
+<div class="card mb-2">
+  <div class="card-header p-3 pt-2 d-flex">
+    <img
+      src="assets/img/sem-imagem.png"
+      alt="Sem Imagem"
+      class="imagem-pequena imagem-borda-redonda mr-3"
+      (click)="navegarParaProdutosDetalhes()"
+    />
+    <div class="text-end pt-1 mr-3">
+      <h4 class="mb-0">{{ produto.nome }}</h4>
+      <p class="text-sm mb-0 text-capitalize">
+        {{ produto.valorVenda | currency : "BRL" : "symbol" }}
+      </p>
+    </div>
+  </div>
+
+  <hr class="dark horizontal my-0" />
+  <div class="card-footer p-3">
+    <p class="mb-0">
+      <span class="text-success text-sm font-weight-bolder">+5% </span
+      >{{ produto.descricao }}
+    </p>
+    <div class="text-end">
+      <!-- Adicionei uma div pai com a classe text-end -->
+      <div
+        class="icon icon-md icon-shape bg-gradient-warning shadow-primary shadow text-center mt-n4 rounded-circle"
+      >
+        <i class="material-icons opacity-10">add</i>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.imagem-pequena {
+  width: 30%;
+  height: auto;
+}
+
+.imagem-borda-redonda {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}

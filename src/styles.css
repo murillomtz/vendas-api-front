@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  height: 1% !important;
+}
+
+body {
+  height: 1% !important;
+} 

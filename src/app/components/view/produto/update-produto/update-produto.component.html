@@ -1,0 +1,49 @@
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="my-3">
+          <label class="form-group">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="produto.nome"
+            name="nome"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="my-3">
+          <label class="form-group">Valor de venda</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="produto.valorVenda"
+            name="valorVenda"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="my-3">
+          <label class="form-group">Descrição</label>
+          <textarea
+            type="text"
+            class="form-control"
+            [(ngModel)]="produto.descricao"
+            nome="descricao"
+            [ngModelOptions]="{ standalone: true }"
+          >
+          </textarea>
+        </div>
+      </div>
+    </div>
+    <button (click)="atualizar()" class="btn btn-success mat-elevation-z8">
+      ATUALIZAR
+    </button>
+  </form>
+</div>
+ 

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="position-relative z-index-2">
+      <div class="card card-plain mb-4">
+        <div class="card-body p-3">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex flex-column h-100">
+                <h2 class="font-weight-bolder mb-0">{{ produto.nome }}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-2">
+        <div class="d-flex">
+          <div
+            class="icon icon-shape icon-lg bg-gradient-success shadow text-center border-radius-xl mt-n3 ms-4"
+          >
+            <i class="material-icons opacity-10" aria-hidden="true">view_in_ar</i>
+            <!-- <img src="assets/img/sem-imagem.png" alt="Sem Imagem" class="imagem-pequena imagem-borda-redonda mr-3"> -->
+          </div>
+          <button
+            type="button"
+            (click)="nagevarParaAtualizarProduto()"
+            class="btn icon-shape bg-gradient-info shadow text-center mt-n3 ms-4"
+          >
+            <i class="material-icons opacity-10" aria-hidden="true">edit</i>
+          </button>
+          <button
+            type="button"
+            (click)="remover()"
+            class="btn icon-shape bg-gradient-danger shadow text-center mt-n3 ms-4"
+          >
+            <i class="material-icons opacity-10" aria-hidden="true"
+              >delete_forever</i
+            >
+            <!-- <img src="assets/img/sem-imagem.png" alt="Sem Imagem" class="imagem-pequena imagem-borda-redonda mr-3"> -->
+          </button>
+        </div>
+        <div class="card-body p-3 d-flex flex-wrap">
+          <img
+            src="assets/img/sem-imagem.png"
+            alt="Sem Imagem"
+            class="imagem-pequena imagem-borda-redonda mr-3"
+          />
+          <div>
+            <div class="align-items-center">
+              <h1>Valor:</h1>
+              <p>{{ produto.valorVenda }} R$</p>
+            </div>
+
+            <div>
+              <h1>Descrição:</h1>
+              <p>
+                {{ produto.descricao }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
