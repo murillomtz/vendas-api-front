@@ -1,0 +1,37 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="width: 5%;">Nº Produto</th>
+        <th style="width: 10%;">Nome</th>
+        <th style="width: 5%;">Valor</th>
+        <th>Descricao</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of produtos">
+        <td>{{ item.id }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.valorVenda | currency : "BRL" : "symbol" }}</td>
+        <td>{{ item.descricao }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <nav aria-label="Paginação">
+    <ul class="pagination">
+      <li class="page-item" *ngIf=" pageAtual > getRange(tabelaDetails.totalPages - 1)[0]">
+        <a class="page-link" (click)="navegarParaPaginaAnteriorTabela(pageAtual)"  aria-label="Anterior">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <ng-container *ngFor="let page of getRange(tabelaDetails.totalPages)"> 
+        <li class="page-item"><a class="page-link"(click)="navegarParaPaginaTabela(page)">{{ page }}</a></li>  
+      </ng-container>
+      
+      <li class="page-item"  *ngIf=" pageAtual < getRange(tabelaDetails.totalPages - 1).length">
+        <a class="page-link"  (click)="navegarParaProximaPaginaTabela(pageAtual)" aria-label="Próximo">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>

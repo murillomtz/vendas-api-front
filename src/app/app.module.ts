@@ -17,6 +17,7 @@ import { CriarProdutoComponent } from './components/view/produto/criar-produto/c
 import { FormsModule } from '@angular/forms';
 import { UpdateProdutoComponent } from './components/view/produto/update-produto/update-produto.component';
 import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabela/produtos-tabela.component';
+import { ProdutosTabelaComponenteComponent } from './components/view/produto/produtos-tabela/produtos-tabela-componente/produtos-tabela-componente.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabe
     ProdutoDetalhesComponent,
     CriarProdutoComponent,
     UpdateProdutoComponent,
-    ProdutosTabelaComponent
+    ProdutosTabelaComponent,
+    ProdutosTabelaComponenteComponent
   ],
   imports: [
     BrowserModule,

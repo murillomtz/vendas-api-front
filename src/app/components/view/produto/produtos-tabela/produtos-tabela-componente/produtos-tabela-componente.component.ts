@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from 'src/app/components/service/produto.service';
 
 @Component({
-  selector: 'app-produtos-tabela',
-  templateUrl: './produtos-tabela.component.html',
-  styleUrls: ['./produtos-tabela.component.css'],
+  selector: 'app-produtos-tabela-componente',
+  templateUrl: './produtos-tabela-componente.component.html',
+  styleUrls: ['./produtos-tabela-componente.component.css']
 })
-export class ProdutosTabelaComponent implements OnInit {
+export class ProdutosTabelaComponenteComponent implements OnInit {
+
   tabelaDetails: any = {};
   produtos: any = [];
   pageAtual: any;
@@ -16,11 +17,10 @@ export class ProdutosTabelaComponent implements OnInit {
     private service: ProdutoService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.pageAtual = Number(this.route.snapshot.paramMap.get('page'));
-    sessionStorage.setItem('componenteAtual', 'Produtos');
     this.findAll(0);
   }
 
@@ -36,5 +36,23 @@ export class ProdutosTabelaComponent implements OnInit {
     });
   }
 
- 
+  navegarParaProximaPaginaTabela(page: number): void {
+    this.pageAtual = page + 1;
+    this.router.navigate([`produtos/tabela/page/${this.pageAtual}`]);
+    this.findAll(this.pageAtual);
+  }
+  navegarParaPaginaAnteriorTabela(page: number): void {
+    this.pageAtual = page - 1;
+    this.router.navigate([`produtos/tabela/page/${this.pageAtual}`]);
+    this.findAll(this.pageAtual);
+  }
+
+  navegarParaPaginaTabela(page: number): void {
+    this.pageAtual = page;
+    this.router.navigate([`produtos/tabela/page/${this.pageAtual}`]);
+    this.findAll(this.pageAtual);
+  }
+  getRange(totalPages: number): number[] {
+    return Array.from({ length: totalPages }, (_, index) => index);
+  }
 }
