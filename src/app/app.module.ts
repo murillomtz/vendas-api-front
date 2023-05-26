@@ -18,6 +18,12 @@ import { FormsModule } from '@angular/forms';
 import { UpdateProdutoComponent } from './components/view/produto/update-produto/update-produto.component';
 import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabela/produtos-tabela.component';
 import { ProdutosTabelaComponenteComponent } from './components/view/produto/produtos-tabela/produtos-tabela-componente/produtos-tabela-componente.component';
+import { ClientesTabelaComponent } from './components/view/cliente/clientes-tabela/clientes-tabela.component';
+import { ClientesTabelaComponentComponent } from './components/view/cliente/clientes-tabela/clientes-tabela-component/clientes-tabela-component.component';
+import { CriarClienteComponent } from './components/view/cliente/criar-cliente/criar-cliente.component';
+import { TelefonePipe } from './components/utils/pipes/telefone.pipe';
+import { LocalidadeService } from './components/service/localidade.service';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +40,11 @@ import { ProdutosTabelaComponenteComponent } from './components/view/produto/pro
     CriarProdutoComponent,
     UpdateProdutoComponent,
     ProdutosTabelaComponent,
-    ProdutosTabelaComponenteComponent
+    ProdutosTabelaComponenteComponent,
+    ClientesTabelaComponent,
+    ClientesTabelaComponentComponent,
+    CriarClienteComponent,
+    TelefonePipe
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,7 @@ import { ProdutosTabelaComponenteComponent } from './components/view/produto/pro
     FormsModule
     
   ],
-  providers: [],
+  providers: [LocalidadeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
