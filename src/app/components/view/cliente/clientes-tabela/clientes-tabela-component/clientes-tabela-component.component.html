@@ -2,24 +2,24 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>sobrenome</th>
+      <!-- <th>sobrenome</th> -->
       <th>sexo</th>
-      <th>nacionalidade</th>
+      <!-- <th>nacionalidade</th> -->
       <th>data Nascimento</th>
       <th>cidade</th>
-      <th >estado</th>
+      <!-- <th >estado</th> -->
       <th>email</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of clientes">
-      <td>{{ item.nome }}</td>
-      <td>{{ item.sobrenome }}</td>
+      <td>{{ item.nome + " " + item.sobrenome }}</td>
+      <!-- <td>{{ item.sobrenome }}</td> -->
       <td>{{ item.sexo }}</td>
-      <td>{{ item.nacionalidade }}</td>
+      <!-- <td>{{ item.nacionalidade }}</td> -->
       <td>{{ item.dataNascimento |  date:'dd/MM/yyyy' }}</td>
-      <td>{{ item.cidade }}</td>
-      <td>{{ item.estado }}</td>
+      <td>{{ item.cidade + ", " + item.estado}}</td>
+      <!-- <td>{{ item.estado }}</td> -->
       <td>{{ item.email }}</td>
     </tr>
   </tbody>

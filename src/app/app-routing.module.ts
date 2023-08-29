@@ -8,6 +8,7 @@ import { UpdateProdutoComponent } from './components/view/produto/update-produto
 import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabela/produtos-tabela.component';
 import { ClientesTabelaComponent } from './components/view/cliente/clientes-tabela/clientes-tabela.component';
 import { CriarClienteComponent } from './components/view/cliente/criar-cliente/criar-cliente.component';
+import { UpgradClienteComponent } from './components/view/cliente/upgrad-cliente/upgrad-cliente.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'clientes/novoCliente',
     component: CriarClienteComponent,
+  },
+  {
+    path: 'clientes/alteracao/:id',
+    component: UpgradClienteComponent,
   },
 ];
 

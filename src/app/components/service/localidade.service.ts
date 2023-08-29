@@ -15,8 +15,8 @@ export class LocalidadeService {
     return this.http.get<string[]>(`${this.localidadesUrl}/estados`);
   }
 
-  getCidadesPorEstado(estado: string): Observable<string[]> {
-    return this.http.get<string[]>(`${this.localidadesUrl}/estados/${estado}/distritos`);
+  getCidadesPorEstado(numeroEstado: any): Observable<string[]> {
+    return this.http.get<string[]>(`${this.localidadesUrl}/estados/${numeroEstado}/distritos`);
   }
 
   getPaises(): Observable<string[]> {

@@ -23,6 +23,8 @@ import { ClientesTabelaComponentComponent } from './components/view/cliente/clie
 import { CriarClienteComponent } from './components/view/cliente/criar-cliente/criar-cliente.component';
 import { TelefonePipe } from './components/utils/pipes/telefone.pipe';
 import { LocalidadeService } from './components/service/localidade.service';
+import { UpgradClienteComponent } from './components/view/cliente/upgrad-cliente/upgrad-cliente.component';
+import { CommonModule, DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { LocalidadeService } from './components/service/localidade.service';
     ClientesTabelaComponent,
     ClientesTabelaComponentComponent,
     CriarClienteComponent,
-    TelefonePipe
+    TelefonePipe,
+    UpgradClienteComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -52,8 +56,10 @@ import { LocalidadeService } from './components/service/localidade.service';
     HttpClientModule,
     FormsModule
     
+    
   ],
-  providers: [LocalidadeService],
+  providers: [LocalidadeService,
+    DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
