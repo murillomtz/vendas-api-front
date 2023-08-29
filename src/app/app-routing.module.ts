@@ -6,6 +6,9 @@ import { ProdutoDetalhesComponent } from './components/view/produto/produto-deta
 import { CriarProdutoComponent } from './components/view/produto/criar-produto/criar-produto.component';
 import { UpdateProdutoComponent } from './components/view/produto/update-produto/update-produto.component';
 import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabela/produtos-tabela.component';
+import { ClientesTabelaComponent } from './components/view/cliente/clientes-tabela/clientes-tabela.component';
+import { CriarClienteComponent } from './components/view/cliente/criar-cliente/criar-cliente.component';
+import { UpgradClienteComponent } from './components/view/cliente/upgrad-cliente/upgrad-cliente.component';
 
 const routes: Routes = [
   {
@@ -13,26 +16,24 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    
     path: 'produtos',
     component: ProdutosComponent,
   },
   {
-    
     path: 'produtos/page/:page',
     component: ProdutosComponent,
   },
   {
     path: 'produtos/tabela',
-    component: ProdutosTabelaComponent ,
+    component: ProdutosTabelaComponent,
   },
   {
     path: 'produtos/tabela/page/:page',
-    component: ProdutosTabelaComponent ,
+    component: ProdutosTabelaComponent,
   },
   {
     path: 'produtos/novoProduto',
-    component: CriarProdutoComponent ,
+    component: CriarProdutoComponent,
   },
   {
     path: 'produtos/:id',
@@ -41,6 +42,22 @@ const routes: Routes = [
   {
     path: 'produtos/alteracao/:id',
     component: UpdateProdutoComponent,
+  },
+  {
+    path: 'clientes/tabela/page/:page',
+    component: ClientesTabelaComponent,
+  },
+  {
+    path: 'clientes/tabela',
+    component: ClientesTabelaComponent,
+  },
+  {
+    path: 'clientes/novoCliente',
+    component: CriarClienteComponent,
+  },
+  {
+    path: 'clientes/alteracao/:id',
+    component: UpgradClienteComponent,
   },
 ];
 
