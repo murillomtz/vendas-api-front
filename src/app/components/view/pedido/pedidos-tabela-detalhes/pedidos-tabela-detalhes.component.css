@@ -1,0 +1,37 @@
+/* Estilização dos botões de quantidade */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-circle {
+    border-radius: 50%; /* Torna os botões redondos */
+    width: 20px;
+    height: 20px;
+    padding: 0; /* Remove o espaço interno do botão */
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .decrease-btn {
+    background-color: #fdd;
+    border-color: #fdd;
+    color: #c00;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .increase-btn {
+    background-color: #ddf;
+    border-color: #ddf;
+    color: #00c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quantity {
+    margin: 0 10px; /* Espaçamento entre a quantidade e os botões */
+  }
+  

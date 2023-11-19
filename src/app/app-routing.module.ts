@@ -9,6 +9,7 @@ import { ProdutosTabelaComponent } from './components/view/produto/produtos-tabe
 import { ClientesTabelaComponent } from './components/view/cliente/clientes-tabela/clientes-tabela.component';
 import { CriarClienteComponent } from './components/view/cliente/criar-cliente/criar-cliente.component';
 import { UpgradClienteComponent } from './components/view/cliente/upgrad-cliente/upgrad-cliente.component';
+import { PedidoDetalhesComponent } from './components/view/pedido/pedido-detalhes/pedido-detalhes.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
     path: 'clientes/alteracao/:id',
     component: UpgradClienteComponent,
   },
+  {
+    path: 'pedido/:id',
+    component: PedidoDetalhesComponent,
+  }
 ];
 
 @NgModule({

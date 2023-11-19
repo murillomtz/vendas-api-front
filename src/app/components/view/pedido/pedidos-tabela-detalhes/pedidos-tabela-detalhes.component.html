@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Valor</th>
+      <th>Quantidade</th>
+      <th>Valor Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems; let i = index">
+      <td>{{ item.name }}</td>
+      <td>{{ item.value | currency:'BRL' }}</td>
+      <td>
+        <div class="quantity-controls">
+          <button class="btn btn-circle btn-sm decrease-btn" (click)="decreaseQuantity(i)">
+            <span>-</span>
+          </button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button class="btn btn-circle btn-sm increase-btn" (click)="increaseQuantity(i)">
+            <span>+</span>
+          </button>
+        </div>
+      </td>
+      <td>{{ (item.value * item.quantity) | currency:'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>

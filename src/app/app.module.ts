@@ -25,6 +25,8 @@ import { TelefonePipe } from './components/utils/pipes/telefone.pipe';
 import { LocalidadeService } from './components/service/localidade.service';
 import { UpgradClienteComponent } from './components/view/cliente/upgrad-cliente/upgrad-cliente.component';
 import { CommonModule, DatePipe } from '@angular/common';
+import { PedidoDetalhesComponent } from './components/view/pedido/pedido-detalhes/pedido-detalhes.component';
+import { PedidosTabelaDetalhesComponent } from './components/view/pedido/pedidos-tabela-detalhes/pedidos-tabela-detalhes.component';
 
 
 @NgModule({
@@ -48,6 +50,8 @@ import { CommonModule, DatePipe } from '@angular/common';
     CriarClienteComponent,
     TelefonePipe,
     UpgradClienteComponent,
+    PedidoDetalhesComponent,
+    PedidosTabelaDetalhesComponent
     
   ],
   imports: [
